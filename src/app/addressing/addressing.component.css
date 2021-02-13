@@ -1,0 +1,20 @@
+.panel {
+    padding: 48px;
+}
+
+mat-card {
+    margin-bottom: 24px;
+    padding-bottom: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+.inputs-group mat-form-field {
+    width: 40%;
+}
+
+p {
+    text-align: center;
+}

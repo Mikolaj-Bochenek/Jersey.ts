@@ -8,3 +8,8 @@ a:active {
     color: lightgrey;
     cursor: pointer;
 }
+
+mat-toolbar {
+    position: fixed;
+    z-index: 2;
+}
