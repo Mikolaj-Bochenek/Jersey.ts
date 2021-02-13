@@ -11,6 +11,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { SidenavListStaticComponent } from './navigation/sidenav-list-static/sidenav-list-static.component';
 import { AddressingComponent } from './addressing/addressing.component';
 import { FormsModule } from '@angular/forms';
+import { SdlcComponent } from './sdlc/sdlc.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     SidenavListComponent,
     SidenavListStaticComponent,
-    AddressingComponent
+    AddressingComponent,
+    SdlcComponent
 
   ],
   imports: [

@@ -1,0 +1,64 @@
+<mat-tab-group>
+    <mat-tab label="Calculator">
+        <section class="panel" fxLayout fxLayoutAlign="center">
+            <form (ngSubmit)="onCalc(f)" #f="ngForm">
+              <mat-card>
+                <mat-card-content fxLayout="column" fxLayoutAlign="center">
+                    <!-- <div *ngIf="!isLoading && result === null">
+                        <p>Jeżeli w zadaniu jest podana informacja o stacjach roboczych uzupełnij TYLKO pole 'stations'.</p>
+                        <p>Natomiast jeżeli nie ma informacji o stacjach uzupełnij TYLKO pole 'jackpot'.</p>
+                        <mat-form-field style="width: 100%;">
+                            <input type="text" matInput placeholder="ip" ngModel name="ip" required>
+                            <mat-error>IP is missing.</mat-error>
+                        </mat-form-field>
+                        <div fxLayout fxLayoutAlign="space-between" class="inputs-group">
+                            <mat-form-field>
+                                <input type="number" matInput placeholder="stations" ngModel name="stations">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type="number" matInput placeholder="jackpot" ngModel name="jackpot">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div *ngIf="!isLoading && result !== null">
+                        <p>adres_IP | maska | gateway | dns</p>
+                        <mat-form-field style="width: 450px;">
+                            <input type="text" matInput value="{{ result }}" [readonly]="true">
+                        </mat-form-field>
+                        <button type="button" mat-icon-button (click)="onCopy()" [cdkCopyToClipboard]="result">
+                            <mat-icon>content_copy</mat-icon>
+                        </button>
+                    </div>
+                    <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+                </mat-card-content>
+                <mat-card-actions fxLayoutAlign="center">
+                  <button type="submit" mat-raised-button [disabled]="f.invalid">Calculate</button>
+                </mat-card-actions>
+                <!-- <mat-card-actions fxLayoutAlign="center" *ngIf="!isLoading && result !== null">
+                    <button type="button" mat-raised-button (click)="result = null">Back</button>
+                </mat-card-actions> -->
+              </mat-card>
+            </form>
+          </section>
+    </mat-tab>
+    <mat-tab label="Solution">
+        <section class="panel" fxLayout="column" fxLayoutAlign="center">
+            <mat-card>
+                <mat-card-title fxLayoutAlign="center">Instruction</mat-card-title>
+                <mat-card-content fxLayoutAlign="center">
+                    <img src="../../assets/SDLC/0.png">
+                </mat-card-content>
+            </mat-card>
+        </section>
+    </mat-tab>
+    <mat-tab label="Examples">
+        <section class="panel" fxLayout="column" fxLayoutAlign="center">
+            <mat-card>
+                <mat-card-title fxLayoutAlign="center">1</mat-card-title>
+                <mat-card-content fxLayoutAlign="center">
+                    <img src="../../assets/SDLC/1.png">
+                </mat-card-content>
+            </mat-card>
+        </section>
+    </mat-tab>
+</mat-tab-group>

@@ -53,9 +53,9 @@ input:-webkit-autofill:active {
     transition-delay: 9999s;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar-y {
     display: none;
-}
+} */
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
