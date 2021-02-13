@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { networks } from './addressing.model';
+import { UIService } from '../shared/ui.service';
 
 @Component({
   selector: 'app-addressing',
@@ -11,7 +12,8 @@ export class AddressingComponent implements OnInit {
   mask: string;
   result: string = null;
   isLoading = false;
-  constructor() { }
+
+  constructor(private uiService: UIService) { }
 
   ngOnInit(): void {
   }
@@ -35,7 +37,7 @@ export class AddressingComponent implements OnInit {
   }
 
   onCopy(): void {
-    console.log('copied!');
+    this.uiService.showSnackbar('Copied to clickboard!', null, 3000);
   }
 
   getMask(amount: number): string {
